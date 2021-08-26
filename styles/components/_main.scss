@@ -1,0 +1,55 @@
+.main {
+  margin-top: 2rem;
+
+  &__section__heading {
+    color: $primary-black;
+    margin-bottom: 1.25rem;
+  }
+
+  &__section__small {
+    font-size: .75rem;
+    margin-bottom: 1.25rem;
+  }
+
+  &__section__payments {
+    display: flex;
+  }
+
+  &__section__payment-card {
+    border: 1.5px solid $light-grey;
+    border-radius: 8px;
+    text-decoration: none;
+    position: relative;
+  }
+
+  &__section__payment-card:focus {
+    border: 1.5px solid $primary-blue;
+  }
+
+  &__section__payment-card:focus::before {
+    content: '✔';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    background: $primary-blue;
+    color: $primary-white;
+    border-radius: 50%;
+    font-size: .9rem;
+    top: -10px;
+    right: -10px;
+  }
+
+  &__section__payment-card__images {
+    padding: 2rem;
+  }
+
+  &__section__payment-card__text {
+    text-align: center;
+    font-size: .75rem;
+    font-weight: bold;
+    border-top: 1px solid $light-grey;
+    padding: .5rem 0;
+    color: $primary-black;
+  }
+}
