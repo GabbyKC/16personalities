@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,CAAE,CACA,MAAM,CAAE,CAAC,CACT,OAAO,CAAE,CAAC,CACV,UAAU,CAAE,UAAU,CAGxB,IAAK,CACH,SAAS,CAAE,MAAM,CACjB,WAAW,CAAE,uBAAuB,CACpC,KAAK,CCRS,OAAO,CDWvB,iBAAuB,CACrB,WAAW,CAAE,wBAAwB",
+"sources": ["base/_reset.scss","base/_variables.scss"],
+"names": [],
+"file": "main.css"
+}
