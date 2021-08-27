@@ -36,12 +36,12 @@
 </header>
 
 <main class="wrapper main">
-    <section>
+    <section class="main__section">
         <h2 class="main__section__heading">How would you like to pay?</h2>
         <p class="main__section__small">We accept credit card and PayPal payments. Optional lorem ipsum.</p>
 
         <div class="main__section__payments">
-            <a href="#" class="main__section__payment-card mr-20">
+            <a href="#" class="main__section__payment-card">
                 <div class="main__section__payment-card__images">
                     <img class="mr-10" src="assets/images/card-visa.svg" alt="Visa Logo">
                     <img class="mr-10" src="assets/images/card-mastercard.svg" alt="Mastercard Logo">
@@ -56,8 +56,85 @@
                 <p class="main__section__payment-card__text">PayPal</p>
             </a>
         </div>
+
+        <form class="form">
+            <label class="form__label" for="email">E-mail address
+                <input class="form__input" id="email" name="email" type="email" autocomplete="email"
+                       placeholder="jane@example.com"
+                       required>
+            </label>
+            <label class="form__label" for="name">Your name
+                <input class="form__input" id="name" name="name" type="text" autocomplete="name"
+                       placeholder="E.g. Jane Smith" required>
+            </label>
+            <label class="form__label" for="ccn">Card number
+                <input class="form__input" id="ccn" name="ccn" type="text" inputmode="numeric" pattern="[0-9\s]{13,19}"
+                       autocomplete="cc-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx" required>
+            </label>
+            <div class="form__cc-dates">
+                <label class="form__label form__label--expiration" for="ccExpiry">Expiration date (MM / RR)
+                    <input class="form__input" id="ccExpiry" name="ccExpiry" type="text" inputmode="numeric"
+                           pattern="(?:0[1-9]|1[0-2])/[0-9]{2}" autocomplete="cc-exp" placeholder="MM / RR" required>
+                </label>
+                <label class="form__label form__label--cvc" for="cvc">CVC code
+                    <input class="form__input" id="cvc" name="cvc" type="text" inputmode="numeric"
+                           pattern="[0-9]{3,5}"
+                           autocomplete="cc-csc" placeholder="CVC code" required>
+                </label>
+            </div>
+            <label class="form__label" for="country">Country
+                <select class="form__input form__select" name="country" id="country" required>
+                    <option value="" selected disabled hidden>Select country</option>
+                    <option value="Albania">Albania</option>
+                    <option value="Australia">Australia</option>
+                    <option value="Belgium">Belgium</option>
+                    <option value="Brazil">Brazil</option>
+                    <option value="Germany">Germany</option>
+                    <option value="Ireland">Ireland</option>
+                    <option value="UK">United Kingdom</option>
+                </select>
+            </label>
+            <label class="form__checkbox" for="discount">I have a discount code
+                <input class="form__checkbox__input" id="discount" name="discount" type="checkbox">
+            </label>
+            <label class="form__checkbox" for="gift">I want to gift a profile
+                <input class="form__checkbox__input" id="gift" name="gift" type="checkbox">
+            </label>
+            <button class="form__submit" type="submit">
+                Pay & Download
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 form__submit__icon" fill="none"
+                     viewBox="0 0 24 24"
+                     stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                </svg>
+            </button>
+        </form>
+        <div class="form__secure">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 form__secure__icon" fill="none" viewBox="0 0 24 24"
+                 stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+            <span class="form__secure__text">Secure Payment</span>
+        </div>
     </section>
-    <aside>
+    <aside class="main__aside">
+        <img class="main__aside__img" src="assets/images/ebook.svg" alt="Advocate Ebook Image">
+        <h3 class="main__aside__title">Advocate Premium Profile</h3>
+        <p class="main__aside__copy">242 pages of insights and advice. Instant PDF download and online access, with
+            e-reader versions also
+            available.</p>
+        <p class="main__aside__price"><span class="main__aside__price__dollar">$</span>29</p>
+        <p class="main__aside__testimonial">"Reading the in-depth, detailed profile is a major learning curve on
+            knowing, understanding and managing
+            myself and the world I live in. The profile is a roadmap to being happy. Equipped with this powerful
+            information, I feel excited to embrace every piece of who I am and improve my life - thanks to the hard
+            work, commitment and dedication of the team here."
+        </p>
+        <div class="main__aside__testimonial__image-container">
+            <img class="main__aside__testimonial__image" src="assets/images/testimonial.png" alt="Testimonial image">
+            <p class="main__aside__testimonial__name">Grace</p>
+        </div>
     </aside>
 </main>
 </body>

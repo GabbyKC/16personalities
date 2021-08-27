@@ -1,5 +1,13 @@
 .main {
+  display: flex;
+  justify-content: space-between;
   margin-top: 2rem;
+  margin-bottom: 3rem;
+
+  &__section {
+    width: 60%;
+    max-width: 430px;
+  }
 
   &__section__heading {
     color: $primary-black;
@@ -13,16 +21,18 @@
 
   &__section__payments {
     display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.25rem;
   }
 
   &__section__payment-card {
     border: 1.5px solid $light-grey;
-    border-radius: 8px;
+    border-radius: 4px;
     text-decoration: none;
     position: relative;
   }
 
-  &__section__payment-card:focus {
+  &__section__payment-card:focus, &__section__payment-card:hover {
     border: 1.5px solid $primary-blue;
   }
 
@@ -51,5 +61,71 @@
     border-top: 1px solid $light-grey;
     padding: .5rem 0;
     color: $primary-black;
+  }
+
+  &__aside {
+    width: 35%;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    border-top: 3px solid $primary-green;
+    border-radius: 4px;
+    box-shadow: 0 0 15px 10px #ecefef;
+    height: 0%;
+  }
+
+  &__aside__img {
+    height: 150px;
+    margin-bottom: 1rem;
+  }
+
+  &__aside__title {
+    color: $primary-black;
+    margin-bottom: 1rem;
+  }
+
+  &__aside__copy {
+    font-size: .75rem;
+    line-height: 1.25rem;
+    margin-bottom: .5rem;
+  }
+
+  &__aside__price {
+    font-size: 2.5rem;
+    color: $primary-black;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    margin-bottom: .5rem;
+  }
+
+  &__aside__price__dollar {
+    font-size: 1rem;
+    vertical-align: super;
+    margin-right: .15rem;
+  }
+
+  &__aside__testimonial {
+    padding: 1rem 1.5rem 2.5rem;
+    background: $background-grey;
+    font-size: .65rem;
+    line-height: 1.25rem;
+    text-align: left;
+    -webkit-clip-path: polygon(100% 9%, 81% 0, 24% 0, 4% 4%, 0 25%, 4% 85%, 23% 85%, 22% 96%, 35% 86%, 90% 85%, 100% 70%);
+    clip-path: polygon(100% 9%, 81% 0, 24% 0, 4% 4%, 0 25%, 4% 85%, 23% 85%, 22% 96%, 35% 86%, 90% 85%, 100% 70%);
+  }
+
+  &__aside__testimonial__image-container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__aside__testimonial__image {
+    border-radius: 50%;
+    height: 50px;
+  }
+
+  &__aside__testimonial__name {
+    color: $primary-black;
+    font-size: .75rem;
+    margin-left: 10px;
   }
 }
