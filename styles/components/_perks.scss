@@ -1,0 +1,41 @@
+.perks {
+  border-top: 1px solid #f3f3f3;
+  display: flex;
+  gap: 20%;
+  justify-content: space-between;
+  padding: 3rem 0;
+  text-align: center;
+
+  &__icon-wrapper {
+    background: #F6F6F7;
+    -webkit-clip-path: polygon(55% 0, 93% 24%, 100% 75%, 50% 100%, 0% 75%, 7% 25%);
+    clip-path: polygon(55% 0, 93% 24%, 100% 75%, 50% 100%, 0% 75%, 7% 25%);
+    width: 102px;
+    margin: 0 auto 1rem;
+    height: 90px;
+    padding-top: 1rem;
+  }
+
+  &__icon {
+    height: 60px;
+    margin-bottom: 1rem;
+  }
+
+  &__title {
+    color: $primary-black;
+    margin-bottom: 1rem;
+  }
+
+  &__copy {
+    font-size: .75rem;
+  }
+
+  &__testimonials-link {
+    text-decoration: none;
+    color: $primary-blue;
+  }
+
+  &__testimonials-link:hover {
+    color: $button-purple-dark;
+  }
+}

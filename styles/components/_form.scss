@@ -55,7 +55,7 @@
     border-color: transparent $primary-green transparent transparent;
   }
 
-  &__label__tooltip:hover  ~&__label__tooltip__text {
+  &__label__tooltip:hover ~ &__label__tooltip__text {
     visibility: visible;
   }
 

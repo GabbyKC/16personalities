@@ -1,0 +1,23 @@
+.footer {
+  border-top: 1px solid #f3f3f3;
+  text-align: center;
+  padding: 3rem 0;
+  font-size: .75rem;
+
+  &__copyright {
+    opacity: .8;
+  }
+
+  &__links-container {
+    margin-top: 1rem;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $primary-blue;
+  }
+
+  &__link:hover {
+    opacity: .8;
+  }
+}
