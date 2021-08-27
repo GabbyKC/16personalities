@@ -15,7 +15,48 @@
   }
 
   &__label--cvc {
+    position: relative;
     width: 25%;
+  }
+
+  &__label__tooltip {
+    position: absolute;
+    text-align: center;
+    cursor: pointer;
+    right: 25%;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 1px solid $light-grey;
+  }
+
+  &__label__tooltip__text {
+    visibility: hidden;
+    width: 145px;
+    left: 85%;
+    top: -20%;
+    background-color: $primary-green;
+    color: $primary-white;
+    text-align: center;
+    padding: 5px 2px;
+    border-radius: 4px;
+    position: absolute;
+    z-index: 1;
+  }
+
+  &__label__tooltip__text:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent $primary-green transparent transparent;
+  }
+
+  &__label__tooltip:hover  ~&__label__tooltip__text {
+    visibility: visible;
   }
 
   &__input {
@@ -46,6 +87,7 @@
   }
 
   &__checkbox {
+    position: relative;
     cursor: pointer;
     width: 40%;
     font-size: .75rem;
@@ -54,6 +96,14 @@
     justify-content: flex-end;
     align-items: center;
     margin-bottom: .5rem;
+  }
+
+  &__checkbox &__label__tooltip {
+    right: 4%;
+  }
+
+  &__checkbox &__label__tooltip__text {
+    left: 102%;
   }
 
   &__checkbox__input {
